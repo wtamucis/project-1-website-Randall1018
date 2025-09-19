@@ -8,29 +8,9 @@
       name="description"
       content="How to adopt a Maine Coon: what to consider, where to adopt, step-by-step process, preparation checklist, and helpful resources."
     />
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="preload" as="image" href="images/adoption-mainecoon.png" />
+    <!-- Preloaded image for faster LCP-->
     <link rel="preload" as="image" href="images/adoption-main-image.png" />
-    <style>
-      body.adoption{
-        background-image: url("images/adoption-mainecoon.png");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-      }
-      body.adoption::before{
-        content:"";
-        position: fixed;
-        inset: 0;
-        background: linear-gradient(rgba(2,6,23,.08), rgba(2,6,23,.08));
-        pointer-events: none;
-      }
-      body.adoption main{
-        background: rgba(255,255,255,.94);
-        box-shadow: 0 18px 40px rgba(0,0,0,.12);
-      }
-    </style>
+    <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body id="top" class="adoption">
@@ -48,11 +28,16 @@
       <figure class="main_page_image">
         <img
           src="images/adoption-main-image.png"
-          alt="Maine Coon cat looking curious indoors next to a carrier and toys"
+          alt="Maine Coon cat looking curious indoors next to a cat tree"
           width="1200"
           height="675"
           loading="eager"
           decoding="async"
+        >
+        <figcaption>
+          Image credit: AI-generated with ChatGPT; free for personal/non-commercial use with attribution.
+        </figcaption>
+      </figure>
 
       <section id="before">
         <h2>Before You Adopt</h2>
@@ -63,9 +48,9 @@
           <i>consistent grooming</i>.
         </p>
         <ul>
-          <li><b>Time & attention:</b> daily play and enrichment; they don’t love being ignored.</li>
+          <li><b>Time &amp; attention:</b> daily play and enrichment; they don’t love being ignored.</li>
           <li><b>Grooming:</b> weekly brushing (2–3× is ideal) to manage that luxurious coat.</li>
-          <li><b>Space & gear:</b> tall scratching post, sturdy cat tree, and wide litter box.</li>
+          <li><b>Space &amp; gear:</b> tall scratching post, sturdy cat tree, and wide litter box.</li>
           <li><b>Budget:</b> food, litter, toys, vet care, and a little extra for the unexpected.</li>
         </ul>
       </section>
@@ -78,7 +63,7 @@
           prioritize <i>health, transparency, and welfare</i>.
         </p>
         <ul>
-          <li><b>Rescue & Shelter:</b> ask about temperament, medical history, and foster notes.</li>
+          <li><b>Rescue &amp; Shelter:</b> ask about temperament, medical history, and foster notes.</li>
           <li><b>Responsible breeder:</b> health testing, contracts, and lifetime take-back are good signs.</li>
           <li><b>Networking:</b> local cat clubs and vets may know of upcoming surrenders or litters.</li>
         </ul>
@@ -88,8 +73,8 @@
         <h2>How the Process Works</h2>
         <ol>
           <li><b>Apply:</b> share your home setup, schedule, and experience with pets.</li>
-          <li><b>Meet & greet:</b> visit in person; look for <i>calm curiosity</i> and comfortable interaction.</li>
-          <li><b>Approve & prepare:</b> gather supplies—carrier, litter setup, food, bowls, and a tall post.</li>
+          <li><b>Meet &amp; greet:</b> visit in person; look for <i>calm curiosity</i> and comfortable interaction.</li>
+          <li><b>Approve &amp; prepare:</b> gather supplies—carrier, litter setup, food, bowls, and a tall post.</li>
           <li><b>Adopt:</b> sign paperwork, pay fees, and schedule a <i>prompt vet visit</i>.</li>
           <li><b>Decompress:</b> give a quiet room for the first few days and introduce slowly to other pets.</li>
         </ol>
@@ -99,7 +84,7 @@
         <h2>Home-Ready Checklist</h2>
         <ul class="checklist">
           <li><b>Carrier</b> (Large/XL), <b>wide litter box</b>, and <b>unscented clumping litter</b>.</li>
-          <li><b>Food & water</b> bowls; consider a <i>circulating fountain</i>.</li>
+          <li><b>Food &amp; water</b> bowls; consider a <i>circulating fountain</i>.</li>
           <li><b>High-protein food</b> per vet guidance; have a small supply ready.</li>
           <li><b>Tall scratching post</b> (≥ 36″) and a sturdy <b>cat tree</b>.</li>
           <li><b>Grooming kit:</b> wide-tooth comb, undercoat rake, slicker brush, nail clippers.</li>
@@ -112,6 +97,10 @@
         <p class="background">
           Adoption fees vary by organization. Expect ongoing costs for <b>quality food</b>, <b>litter</b>,
           <b>toys</b>, and routine <i>veterinary care</i>. Planning a monthly pet budget keeps surprises small.
+        </p>
+        <p class="background">
+          Many new owners also set aside a modest <b>emergency fund</b> for unexpected vet visits or supplies.
+          A little planning up front makes the transition easier on both you and your new companion.
         </p>
       </section>
 
@@ -131,6 +120,10 @@
         <p class="background">
           If a <b>friendly, easygoing</b> companion with a big heart sounds right for you, begin your journey today.
           Reach out to a rescue or shelter, or talk with a reputable breeder. Your future Maine Coon is waiting!
+        </p>
+        <p class="background">
+          Take your time, ask lots of questions, and make sure the match fits your household and routine. A great
+          adoption sets you up for a long, happy life together.
         </p>
       </section>
 
@@ -158,7 +151,8 @@
 
               <div class="form-field">
                 <label for="phone">Phone *</label>
-                <input id="phone" name="phone" type="tel" inputmode="tel" required autocomplete="tel" placeholder="(###) ###-####" />
+                <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="e.g., +1 555-555-5555" pattern="^\+?\d{1,3}[\s\-]?\d{3}[\s\-]?\d{3}[\s\-]?\d{4}$" title="Please enter a valid phone number, e.g., +1 555-555-5555" />
+                <small class="helper-text">Format: +1 555-555-5555 (include country code if outside the US)</small>
               </div>
 
               <div class="form-field">
@@ -169,7 +163,7 @@
           </fieldset>
 
           <fieldset>
-            <legend>Home & Lifestyle</legend>
+            <legend>Home &amp; Lifestyle</legend>
             <div class="form-grid">
               <div class="form-field">
                 <label for="housing">Housing</label>
@@ -188,7 +182,7 @@
                   <option value="none">None</option>
                   <option value="cats">Cat(s)</option>
                   <option value="dogs">Dog(s)</option>
-                  <option value="both">Cats & Dogs</option>
+                  <option value="both">Cats &amp; Dogs</option>
                   <option value="other">Other</option>
                 </select>
               </div>
